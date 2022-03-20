@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <!-- background_image -->
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="canonical" href="https://aviationstack.com/">
+<link rel="shortcut icon" href="/site_images/aviationstack_shortcut_icon.ico">
+<link rel="apple-touch-icon" href="/site_images/aviationstack_icon.png">
+<script src='https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'></script>;
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+body {
+  margin:0;
+  background: #000000; 
+  background: -webkit-linear-gradient(to right, #000000, #000000); 
+  background: linear-gradient(to right, #000000, #000000); 
+}
+#burger-menu {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 50px;
+  overflow: visible;
+  position: relative;
+  z-index:2;
+}
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+  background: #fff;
+  display: block;
+  height: 2px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+#burger-menu span:before,
+#burger-menu span:after {
+  content: "";
+}
+#burger-menu span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+#burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 27px;
+}
+#burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 27px;
+}
+
+#burger-menu.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+#burger-menu.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+#burger-menu.close span:after {
+  top: 0px;
+  left:0;
+  transform: rotate(90deg);
+  opacity:0;
+  width:0;
+}
+
+#menu{
+  z-index:1;
+  min-width:100%;
+  min-height:100%;
+  position: fixed;
+  top: 0;;
+  height:auto;
+  visibility: hidden;
+  opacity: 0;
+  text-align:center;
+  padding-top:20px;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#menu.overlay{
+  visibility: visible;
+  opacity: 1;
+  padding-top:100px;
+  background:rgba(0, 0, 0, 0.5);
+}
+
+#menu li{
+  list-style:none;
+}
+#menu a{
+  color:#fff;
+  display:block;
+  font-size: 32px;
+  margin-bottom:30px;
+  text-decoration:none;
+}
+.fade-in-text {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+.fade-in-button {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+  </style>
+</head>
+ 
+
+  <body>    
+    
+    
+    
+
+    <div style="background-color:rgb(0, 0, 0)  ;  width:auto; height: auto; text-align:center; color: rgb(255, 255, 255);text-overflow: clip;">
+      <div class="fade-in-text">
+       <h1>Plan4You -Unterricht</h1> 
+     </div>   
+          
+                                       
+                      
+                      <div id="burger-menu">
+                        
+                        <span></span>
+                      </div>
+                      <div class="fade-in-button"> 
+                        <nav class="navbar-collapse navbar-expand-xxl">  
+                        <a href="https://gibbch.sharepoint.com/sites/KGTPL2018A/_layouts/15/Doc.aspx?sourcedoc={a18e90c2-34f0-4fae-ae3f-a0de0cb17592}&action=edit&wd=target%28Willkommen.one%7C99a0da8c-cbd9-433d-9ff8-3bbdc67f2597%2FRepetition%20Teil%2012%7C3d5d433c-979c-48c4-ab92-33a579120be6%2F%29&wdorigin=703" class="btn btn-outline-warning"               
+                            onclick=" Handler(this, event);">4.Lehrjahr</a>
+                            <a href="https://gibbch.sharepoint.com/sites/KGTPL2018A/_layouts/15/Doc.aspx?sourcedoc={a18e90c2-34f0-4fae-ae3f-a0de0cb17592}&action=edit&wd=target%28Willkommen.one%7C99a0da8c-cbd9-433d-9ff8-3bbdc67f2597%2FRepetition%20Teil%2012%7C3d5d433c-979c-48c4-ab92-33a579120be6%2F%29&wdorigin=703" class="btn btn-outline-warning"               
+                            onclick=" Handler(this, event);">3.Lehrjahr</a>
+                            <a href="https://gibbch.sharepoint.com/sites/KGTPL2018A/_layouts/15/Doc.aspx?sourcedoc={a18e90c2-34f0-4fae-ae3f-a0de0cb17592}&action=edit&wd=target%28Willkommen.one%7C99a0da8c-cbd9-433d-9ff8-3bbdc67f2597%2FRepetition%20Teil%2012%7C3d5d433c-979c-48c4-ab92-33a579120be6%2F%29&wdorigin=703" class="btn btn-outline-warning"               
+                            onclick=" Handler(this, event);">2.Lehrjahr</a>
+                            <a href="https://gibbch.sharepoint.com/sites/KGTPL2018A/_layouts/15/Doc.aspx?sourcedoc={a18e90c2-34f0-4fae-ae3f-a0de0cb17592}&action=edit&wd=target%28Willkommen.one%7C99a0da8c-cbd9-433d-9ff8-3bbdc67f2597%2FRepetition%20Teil%2012%7C3d5d433c-979c-48c4-ab92-33a579120be6%2F%29&wdorigin=703" class="btn btn-outline-warning"               
+                            onclick=" Handler(this, event);">Zusatzklasse</a>
+
+
+
+
+
+
+                      <div id="menu">
+                          <ul>
+                            <li><a class="active"><a href="index.html" ><span>Home</span></a></li>
+                            <li><a href="fachberichte.html"><span>Fachinfos</span></a></li>
+                              <li><a href="Lernen.html"><span>Lernen</span></a></li>
+                                              
+                            </ul>
+
+
+                          </ul>
+                      </div>                         
+                      <script>
+                      var burgerMenu = document.getElementById('burger-menu');
+                        var overlay = document.getElementById('menu');
+                        burgerMenu.addEventListener('click',function(){
+                          this.classList.toggle("close");
+                          overlay.classList.toggle("overlay");
+                        });
+                        </script>    
+
+                    
+                   
+                  
+                  
+                                  <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+
+                      function Handler(self, e) {
+                        e.preventDefault();
+                        var href = $(self).attr("href");
+                        window.open(href);
+                        return false;
+              
+                                              }
+                
+                           
+               
+                    
+                    </script>
+
+                    </div>
+                  
+                    </nav>
+                    
+                                  
+                    
+                    
+                    
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
